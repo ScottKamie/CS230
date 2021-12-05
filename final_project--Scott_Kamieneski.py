@@ -47,7 +47,6 @@ states_list.sort()
 def read_file():
     # Read csv file
     df_companies = pd.read_csv("Fortune_500_Corporate_Headquarters.csv").set_index("OBJECTID")
-    # df_companies = pd.read_csv("Fortune_500_Corporate_Headquarters.csv")
 
     # Add region column to dataframe
     df_companies['REGION'] = ''
