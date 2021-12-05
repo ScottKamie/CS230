@@ -225,13 +225,13 @@ def main():
     # Fortune 500 images
     column1, column2 = st.columns(2)
     with column1:
-        st.image("/CS230/Project/Fortune_500_Image.png", width=300)
+        st.image("Fortune_500_Image.png", width=300)
     with column2:
         st.text("")
         st.text("")
         st.text("")
         st.text("")
-        st.image("/CS230/Project/Fortune_500_Logos.jpg", width=400)
+        st.image("Fortune_500_Logos.jpg", width=400)
 
     # Outro
     st.text("")
