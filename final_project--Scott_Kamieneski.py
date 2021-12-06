@@ -130,7 +130,7 @@ def create_bar_chart(user_region=regions):
     xs = regions_capitalize
     ys = count_companies_per_region(user_region)
 
-    plt.bar(xs, ys, width=0.5, color='b')
+    plt.bar(xs, ys, width=0.5, color='g')
 
     for x in range(len(xs)):
         plt.text(x, ys[x], ys[x], ha="center", va="bottom")
@@ -148,7 +148,7 @@ def create_scatter_plot(user_region=regions, user_min_profit=0):
     xs = list_company_ranks(user_region, user_min_profit)
     ys = list_company_sizes(user_region, user_min_profit)
 
-    plt.scatter(xs, ys, marker='.', color='b', s=10)
+    plt.scatter(xs, ys, marker='.', color='g', s=10)
 
     plt.xlabel("Company's Rank")
     plt.ylabel("Company's Size (Number of Employees)")
@@ -169,13 +169,13 @@ def create_map(user_min_revenue=5000):
                       data=df_companies,
                       get_position='[LONGITUDE, LATITUDE]',
                       get_radius=12500,
-                      get_color=[10, 150, 230],
+                      get_color=[115, 250, 112],
                       stroked=True,
-                      get_line_color=[0, 0, 220],
+                      get_line_color=[5, 122, 2],
                       line_width_min_pixels=0.75,
                       opacity=0.5,
                       pickable=True)
-    tool_tip = {'html': 'Company:<br/> <b>{NAME}</b>', 'style': {'backgroundColor': 'steelblue', 'color': 'white'}}
+    tool_tip = {'html': 'Company:<br/> <b>{NAME}</b>', 'style': {'backgroundColor': 'green', 'color': 'white'}}
     mapping = pdk.Deck(map_style='mapbox://styles/mapbox/light-v9',
                        initial_view_state=view_state,
                        layers=[layer],
