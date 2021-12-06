@@ -1,5 +1,9 @@
 [theme]
-base="light"
-primaryColor="#20ad09"
-backgroundColor="#e0ffde"
-secondaryBackgroundColor="#b2f3ab"
+primaryColor=’#020202’
+backgroundColor=’#c4c3c3’
+secondaryBackgroundColor=’#ebd316’
+font = ‘sans serif’
+[server]
+headless = true
+port = $PORT
+enableCORS = false
